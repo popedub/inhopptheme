@@ -1,0 +1,73 @@
+body.category,
+body.single {
+  article {
+    margin-top: $gutter;
+    padding-bottom: $gutter;
+
+    .entry-title {
+      // font-size: $f2;
+      text-transform: uppercase;
+      font-family: "Staatliches", cursive;
+      margin-bottom: 0;
+
+      a {
+        color: $marron;
+      }
+
+      @include media-breakpoint-up(lg) {
+        // font-size: $f2;
+      }
+    }
+
+    .social-autor {
+      margin-top: $gutter/3;
+    }
+
+    .social-autor a,
+    .mail-autor a {
+      font-family: "Staatliches", cursive;
+      color: $marron;
+      font-size: 1.125rem;
+
+      @include media-breakpoint-up(lg) {
+        font-size: $f3;
+      }
+    }
+  }
+}
+
+.entry-summary {
+  margin-top: $gutter/2;
+  font-size: $f20px;
+}
+
+.autor {
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  margin-bottom: 15px;
+
+  @include media-breakpoint-up(lg) {
+    margin-top: -15px;
+  }
+}
+
+.cargo {
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+  font-size: 1.125rem;
+
+  @include media-breakpoint-up(lg) {
+    padding-right: 20%;
+    font-size: $f3;
+  }
+}
+
+time.updated {
+  font-family: "Staatliches", cursive;
+  margin-bottom: $gutter/2;
+  font-size: 1.125rem;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f3;
+  }
+}

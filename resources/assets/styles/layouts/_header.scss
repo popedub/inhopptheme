@@ -1,0 +1,197 @@
+.banner .container-fluid {
+  @include media-breakpoint-up(lg) {
+    padding-top: 30px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 30px;
+  }
+}
+
+.banner .nav li {
+  @extend .nav-item ;
+
+  text-transform: uppercase;
+  font-family: "Staatliches", cursive;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f3; //23px
+  }
+}
+
+.current-menu-item {
+  a {
+    color: $verde;
+  }
+}
+
+.banner .nav a {
+  @extend .nav-link ;
+
+  color: white;
+
+  &:hover,
+  &:focus {
+    color: $verde;
+  }
+}
+
+.brand.mr-auto.d-block {
+  z-index: 2389;
+}
+
+.ico-logo {
+  width: 108px;
+  height: 46px;
+  margin-top: 20px;
+  margin-left: 18px;
+  margin-bottom: 20px;
+
+  @include media-breakpoint-up(lg) {
+    width: 202px;
+    height: 50px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+ul.sub-menu {
+  opacity: 1;
+  list-style: none;
+  padding-inline-start: 0;
+
+  @include media-breakpoint-up(lg) {
+    display: none;
+    position: absolute;
+    top: 70px;
+  }
+}
+
+li.wpml-ls-item:hover,
+li.wpml-ls-item:focus {
+  ul.sub-menu {
+    display: block;
+  }
+}
+
+/* stylelint-disable */
+.nav-primary {
+  @include media-breakpoint-down(lg) {
+    display: none;
+    height: 0;
+    opacity: 0;
+    text-align: left;
+    transition: all 0.1s ease;
+
+    @include make-col(12);
+
+    padding-top: 100px;
+    visibility: hidden;
+
+    .wpml-ls-first-item {
+      margin-top: 100px;
+    }
+
+    .wpml-ls-item a {
+      color: white !important;
+    }
+
+    a {
+      color: $verde !important;
+      font-size: $fmobil-30px;
+    }
+  }
+
+  .nav{
+    display: none;
+    visibility: hidden;
+
+		@include media-breakpoint-up(lg) {
+      display: flex;
+      visibility: visible;
+      // margin-right: 125px;
+		}
+  }
+}
+
+#menu-toggle {
+	display: none;
+  transition: all .3s ease-in-out;
+
+	 &:checked ~ .nav-primary {
+      opacity: 1;
+      height: 100vh;
+      padding: 150px 25px;
+      visibility: visible;
+      display: block;
+      transition: all .3s ease-in-out;
+      background-color: $marron;
+      position: fixed;
+      width: 100%;
+      z-index: 100;
+    }
+
+  &:checked ~ .nav-primary .nav {
+    display: block;
+    visibility: visible;
+    transition: all .3s ease-in-out;
+  }
+
+  &:checked ~ .label-toggle {
+    position: fixed;
+    right: 0;
+  }
+
+	&:checked ~ .label-toggle span {
+  		opacity: 1;
+  		transform: rotate(-45deg) translate(5px, 0px);
+  		background: $verde;
+  		&:nth-last-child(2){
+  			opacity: 0;
+  			transform: rotate(0deg) scale(0.2, 0.2);
+  		}
+  		&:nth-last-child(3){
+  			transform: rotate(45deg) translate(0, -8px);
+  		}
+	}
+
+}
+
+.label-toggle {
+  float: right;
+  height: 36px;
+  width: 36px;
+  margin-top: 32px;
+  margin-right: 18px;
+  z-index: 1076;
+
+  @include media-breakpoint-up (lg) {//estaba en lg
+    margin-top: 15px;
+  }
+
+  span{
+		display: block;
+		width: 28px;
+		height: 2px;
+		margin-bottom: 6px;
+		position: relative;
+    background: $verde;
+		z-index: 1;
+    transform-origin: 2px 0px;
+    transition: transform 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+		              background 0.2s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.2s ease;
+
+		&:first-child{
+			transform-origin: 0% 0%;
+		}
+		&:nth-last-child(2){
+  			transform-origin: 0% 100%;
+		}
+	}
+
+  @include media-breakpoint-up(lg){
+		display: none;
+	}
+}
+/* stylelint-enable */

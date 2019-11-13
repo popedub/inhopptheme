@@ -1,0 +1,41 @@
+/** Import Bootstrap functions */
+@import "~bootstrap/scss/functions";
+
+$theme-colors: (
+  primary: #525ddc
+);
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+$verde: #4dc588;
+$marron : #2c2114;
+
+$gutter: 100px;
+
+$f1: 3.625rem; //58px for h1
+$f2: 3rem; //48px para los titulares grandes
+$f26px: 1.625rem;
+$f3: 1.4375rem;//23px para el menu lg
+$f20px: 1.25rem;
+
+//festival!
+$fmobil-30px: 1.875rem;
+
+$grid-breakpoints: (
+  // Extra small screen / phone
+  xs: 0,
+  // Small screen / phone
+  sm: 576px,
+  // Medium screen / tablet
+  md: 768px,
+  // Large screen / desktop
+  lg: 992px,
+  // Extra large screen / wide desktop
+  xl: 1200px,
+  // Super extra large screen
+  xxl: 1439px,
+  //para la navegacion de la galeria
+  superlarge: 2200px,
+);

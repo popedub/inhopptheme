@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Staatliches&display=swap");
+
+body {
+  color: $marron;
+  font-family: "Roboto", sans-serif;
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.container {
+  @include media-breakpoint-up(xxl) {
+    max-width: 1380px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.verde {
+  color: $verde;
+}
+
+.bg-verde {
+  background-color: $verde;
+}
+
+.bg-verde-light {
+  background-color: #dbf2e6;
+}
+
+.marron {
+  color: $marron;
+
+  a {
+    color: $marron;
+  }
+}
+
+.bg-marron {
+  background-color: $marron;
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+h1 {
+  line-height: 1.1;
+  font-family: "Staatliches", cursive;
+  font-size: $fmobil-30px;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f1;
+  }
+}
+
+h3 {
+  font-family: "Staatliches", cursive;
+  font-size: 1.125rem; //18px
+
+  @include media-breakpoint-up(lg) {
+    font-size: 1.75rem;
+  }
+}
+
+.ti {
+  text-transform: uppercase;
+  border-bottom: 2px solid $marron;
+  font-family: "Staatliches", cursive;
+}
+
+section:not(.hero) {
+  padding-top: $gutter/2;
+  padding-bottom: 60px;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $gutter/2;
+    padding-bottom: $gutter;
+  }
+}
+
+.f1 {
+  font-size: $f1;
+}
+
+.f2 {
+  font-size: $fmobil-30px;
+  line-height: 1;
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f2;
+  }
+}
+
+.f20px {
+  font-size: 1rem;
+
+  p {
+    font-size: 1rem;
+  }
+
+  @include media-breakpoint-up(lg) {
+    font-size: $f20px;
+
+    p {
+      font-size: $f20px;
+    }
+  }
+}
+
+.cp-top {
+  padding-top: $gutter/2;
+
+  @include media-breakpoint-up(lg) {
+    padding-top: $gutter;
+  }
+}
+
+.cp-bottom {
+  padding-bottom: $gutter;
+}
+
+hr {
+  border-top: 1px solid $verde;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
